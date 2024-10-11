@@ -18,22 +18,14 @@
         </section>
         <section class="music">
           <h2>Есть песня, которая ассоциируется только с тобой (ты её знаешь)</h2>
-          <audio id="audio-player" controls style="display: none;">
+          <audio controls>
             <source src="романс.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
           </audio>
-          <button onclick="document.getElementById('audio-player').play()">Play</button>
-          <button onclick="stopAudio()">Stop</button>
         </section>
         <footer>
             <p>Надеюсь, у нас и дальше все будет хорошо :D</p>
         </footer>
-        <script>
-          function stopAudio() {
-            const audioPlayer = document.getElementById('audio-player');
-            audioPlayer.pause(); 
-            audioPlayer.currentTime = 0; 
-          }
-        </script>
     </body>
 </html>
 <style> 
