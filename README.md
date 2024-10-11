@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <title>for my Sabira</title>
@@ -17,15 +16,24 @@
             <p>ТЫ САМАЯ КРАСИВАЯ ДЕВОЧКА НА ПЛАНЕТЕ Я ПРОСТО ТАЩУСЬ Я ТВОЙ СИМП</p>
             <p>Хочу и дальше тебя радовать таким мелочам, ты заслуживаешь всего в этом мире</p>
         </section>
-        <section class = "music">
-            <h2>Хочу поделиться песней, которая пипец как ассоциируется с тобой</h2>
-            <audio controls>
-                <source src = "романс.mp3" type ="audio/mpeg">
-            </audio>
+        <section class="music">
+          <h2>Есть песня, которая ассоциируется только с тобой (ты её знаешь)</h2>
+          <audio id="audio-player" controls style="display: none;">
+            <source src="романс.mp3" type="audio/mpeg">
+          </audio>
+          <button onclick="document.getElementById('audio-player').play()">Play</button>
+          <button onclick="stopAudio()">Stop</button>
         </section>
         <footer>
             <p>Надеюсь, у нас и дальше все будет хорошо :D</p>
         </footer>
+        <script>
+          function stopAudio() {
+            const audioPlayer = document.getElementById('audio-player');
+            audioPlayer.pause(); 
+            audioPlayer.currentTime = 0; 
+          }
+        </script>
     </body>
 </html>
 <style> 
